@@ -190,3 +190,36 @@ select {
   font-weight: 700;
   color: hsl( var(--clr-white) / .25)
 }
+
+/* ------------------------------ */
+/*    Component Classes section     */
+/* ----------------------------- */
+
+.large-button{
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+  padding: 0 2em;
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  width: 250px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.large-button::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: hsl(var(--clr-white) / 0.25);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 300ms linear,transform 500ms ease-in-out;
+}
+.large-button:hover::after,
+.large-button:focus::after{
+  opacity: 1;
+  transform: scale(1.75);
+}

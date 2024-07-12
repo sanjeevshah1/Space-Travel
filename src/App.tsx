@@ -10,6 +10,7 @@ function App() {
        <div className="" style={{padding: "1rem"}}>
                light blue bg with a 20% alpha and white text
        </div>
+       <a href="#" className="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
    </div>
   )
 }
