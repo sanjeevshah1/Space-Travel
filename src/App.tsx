@@ -5,13 +5,11 @@ function App() {
   
 
   return (
-    <div className='container bg-dark'>
-      <h2>Hello World!</h2>
-       <div className="" style={{padding: "1rem"}}>
-               light blue bg with a 20% alpha and white text
-       </div>
-       <a href="#" className="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
-   </div>
+        <div className="numbers-indicator flow">
+          <button aria-selected="true" className='text-white fs-200' >1</button>
+          <button className='text-white fs-200'>2</button>
+          <button className='text-white fs-200'>3</button>
+        </div>
   )
 }
 
