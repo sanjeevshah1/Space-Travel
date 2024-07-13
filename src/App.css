@@ -379,9 +379,7 @@ select {
   height: 0.65vh;
   padding: 2em;
 }
-.pick-div{
- 
-}
+
 .pick-div p{
   font-size: 1rem;
   text-align: center;
@@ -393,9 +391,7 @@ select {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.nav-div{
 
-}
 
 .planet-nav {
   width: max-content;
