@@ -31,22 +31,7 @@ const Header: React.FC = () => {
     };
   }, []);
 
-const LinkVariants ={
-  initial:{
-      x: "100vw",
-      opacity: 0
-  },
-  visible:{
-      x: 0,
-      opacity: 1
-    ,transition:{
-      duration: 0.5
-    }
-  },
-  exit:{
-    x: "-100vw"
-  }
-}
+
 
   useEffect(() => {
     if (windowWidth < 768 && dropDown) {
@@ -81,7 +66,9 @@ const LinkVariants ={
           <button id="close" className="pointer" onClick={()=>{
             setDropDown(false);
           }}><img src={close} alt="close-icon" /></button>
+            
             <ul className="primary-navigation underline-indicators flex">
+              
               <li>
                 <NavLink to="/" aria-selected={true} state={{page: "home"}}
                 end
@@ -91,14 +78,17 @@ const LinkVariants ={
                 <span>00</span>Home
                 </NavLink>
               </li>
+
               <li>
                 <NavLink to="destination" state={{page: "destination"}}
+                
                 className={({isActive}) => {
                   return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
                  }}>
                 <span>01</span>Destination
                 </NavLink>
               </li>
+
               <li>
                 <NavLink to="crew" state={{page: "crew"}}
                 className={({isActive}) => {
@@ -107,6 +97,7 @@ const LinkVariants ={
                 <span>02</span>Crew
                 </NavLink>
               </li>
+
               <li>
                 <NavLink to="technology" state={{page: "technology"}} 
                 className={({isActive}) => {
@@ -115,6 +106,7 @@ const LinkVariants ={
                 <span>03</span>Technology
                 </NavLink>
               </li>
+
             </ul>
         </motion.nav>
         </>
