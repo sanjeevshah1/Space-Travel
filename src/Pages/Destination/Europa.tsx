@@ -1,6 +1,6 @@
 import {useOutletContext } from "react-router-dom";
 import { planetType } from "../../types";
-const Europia = () => {
+const Europa = () => {
     const planets:planetType[] = useOutletContext()
     const planet:planetType = planets[2];
   return (
@@ -19,4 +19,4 @@ const Europia = () => {
   )
 }
 
-export default Europia
+export default Europa

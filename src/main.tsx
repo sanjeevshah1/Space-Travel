@@ -9,7 +9,7 @@ import Crew from './Pages/Crew.tsx'
 import Technology from './Pages/Technology.tsx'
 import Moon from './Pages/Destination/Moon.tsx'
 import Mars from './Pages/Destination/Mars.tsx'
-import Europia from './Pages/Destination/Europia.tsx'
+import Europa from './Pages/Destination/Europa.tsx'
 import Titan from './Pages/Destination/Titan.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Route index element={<Moon/>}/>
             <Route path='moon' element={<Moon/>}/>
             <Route path='mars' element={<Mars/>}/>
-            <Route path='europia' element={<Europia/>}/>
+            <Route path='europa' element={<Europa/>}/>
             <Route path='titan' element={<Titan/>}/>
           </Route>
           <Route path='crew' element = {<Crew/>}/>
