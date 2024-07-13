@@ -7,7 +7,7 @@ import {motion, AnimatePresence} from "framer-motion"
 
 // Debounce function to limit the rate at which a function is executed
 const debounce = <T extends (...args: any[]) => void>(func: T, wait: number) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
