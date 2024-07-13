@@ -66,22 +66,35 @@ const Header: React.FC = () => {
           }}><img src={close} alt="close-icon" /></button>
             <ul className="primary-navigation underline-indicators flex">
               <li>
-                <NavLink to="home" className="ff-sans-cond uppercase text-white letter-spacing-2k">
+                <NavLink to="/" aria-selected={true} state={{page: "home"}}
+                end
+                 className={({isActive}) => {console.log(isActive)
+                  return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
+                 }}>
                 <span>00</span>Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="destination" className="ff-sans-cond uppercase text-white letter-spacing-2">
+                <NavLink to="destination" state={{page: "destination"}}
+                className={({isActive}) => {console.log(isActive)
+                  return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
+                 }}>
                 <span>01</span>Destination
                 </NavLink>
               </li>
               <li>
-                <NavLink to="crew" className="ff-sans-cond uppercase text-white letter-spacing-2">
+                <NavLink to="crew" state={{page: "crew"}}
+                className={({isActive}) => {console.log(isActive)
+                  return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
+                 }}>
                 <span>02</span>Crew
                 </NavLink>
               </li>
               <li>
-                <NavLink to="technology" className="ff-sans-cond uppercase text-white letter-spacing-2">
+                <NavLink to="technology" state={{page: "technology"}} 
+                className={({isActive}) => {console.log(isActive)
+                  return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
+                 }}>
                 <span>03</span>Technology
                 </NavLink>
               </li>

@@ -364,10 +364,71 @@ select {
   display: block;
   margin-bottom: 2rem;
 }
+
+/* Destination Page CSS */
+.destination-page{
+  background-image: url("./../src/assets/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.destination{
+  border: 1px solid gold;
+  height: 0.65vh;
+  padding: 2em;
+}
+.pick-div{
+  border: 1px solid gold;
+}
+.pick-div p{
+  font-size: 1rem;
+  text-align: center;
+}
+.pick-div img{
+  width: 150px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  margin-top: 50px;
+}
+.nav-div{
+  border: 1px solid gold;
+}
+
+/* Crew Page CSS */
+.crew-page{
+  background-image:url("./../src/assets/crew/background-crew-mobile.jpg");
+  background-size: cover ;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* Technology Page CSS */
+.technology-page{
+  background-image: url("./../src/assets/technology/background-technology-mobile.jpg");
+  background-size: cover ;
+  background-position: center;
+  min-height: 100vh;
+}
+
+
 @media screen and (min-width: 675px) {
   
 .home-page{
   background-image: url("./../src/assets/home/background-home-desktop.jpg");
+  min-height: 100vh;
+}
+.destination-page{
+  background-image: url("./../src/assets/destination/background-destination-desktop.jpg");
+  min-height: 100vh;
+}
+.crew-page{
+  background-image: url("./../src/assets/crew/background-crew-desktop.jpg");
+  min-height: 100vh;
+}
+.technology-page{
+  background-image: url("./../src/assets/technology/background-technology-desktop.jpg");
   min-height: 100vh;
 }
 .hide-drop{
