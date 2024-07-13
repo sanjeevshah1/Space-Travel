@@ -113,7 +113,9 @@ select {
   display: grid;
   gap: var(--gap, 1em);
 }
-
+.pointer{
+  cursor: pointer;
+}
 .container{
   padding-inline: 2em;
   max-width: 80rem;
@@ -195,16 +197,16 @@ select {
 /* ----------------------------- */
 
 .large-button{
-  margin-top: 100px;
   position: relative;
   z-index: 1;
   padding: 0 2em;
-  display: grid;
+  display: inline-grid;
   aspect-ratio: 1;
   place-items: center;
-  width: 250px;
+  width: 144px;
   text-decoration: none;
   border-radius: 50%;
+  background-color: hsl(var(--clr-white));
 }
 .large-button::after{
   content: "";
@@ -227,7 +229,7 @@ select {
 
 .primary-navigation {
   --gap: 8rem;
-  --underline-gap: 2rem;
+  --underline-gap: 1.5rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -242,7 +244,7 @@ select {
   margin-right: .5em;
 }
 
-.underline-indicators > * {
+.underline-indicators  * {
   padding: var(--underline-gap, 1rem) 0;
   border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
@@ -251,7 +253,7 @@ select {
 .underline-indicators > *:focus {
   border-color: hsl( var(--clr-white) / .25);
 }
-.underline-indicators > .active,
+.underline-indicators .active,
 .underline-indicators > [aria-selected="true"] {
     color: hsl( var(--clr-white) / 1);
     border-color: hsl( var(--clr-white) / 1);
@@ -296,3 +298,112 @@ select {
  color: hsl( var(--clr-dark) );
   background-color: hsl( var(--clr-white) );
 }
+
+/* Home Page CSS */
+
+.home-page{
+  background-image: url("./../src/assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center;
+  min-height: 100vh;
+}
+.primary-header{
+  padding-inline: 2em;
+  height: 88px;
+  align-items: center;
+  width: 100%;
+}
+.logo-container{
+  margin-right: auto;
+  cursor: pointer;
+}
+.space{
+  margin-bottom: 10px;
+}
+.text-center{
+  text-align: center;
+}
+.intro{
+  text-align: center;
+}
+.button-div{
+  height: 252px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Add styles for the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background-color: hsl(var(--clr-dark)/ 0.2);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 2;
+}
+.sidebar .primary-navigation {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar .primary-navigation li {
+  width: 100%;
+}
+#close{
+  display: block;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 675px) {
+  
+.home-page{
+  background-image: url("./../src/assets/home/background-home-desktop.jpg");
+  min-height: 100vh;
+}
+.hide-drop{
+  display: none;
+}
+#close{
+  display: none;
+}
+.primary-navigation {
+  --underline-gap: 2rem;
+}
+.home{
+  height: 65vh;
+  display: flex;
+  align-items: flex-end;
+}
+.large-button{
+  width: 200px;
+}
+.intro{
+  width: 50%;
+  text-align: left;
+}
+.intro h1{
+  font-size: var(--fs-500);
+}
+.intro span{
+  display: block;
+  margin-top: 0.2em;
+}
+.intro p{
+  font-size: var(--fs-300);
+}
+.button-div{
+  width: 50%;
+}
+
+}
+
