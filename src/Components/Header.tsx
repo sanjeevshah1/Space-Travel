@@ -31,6 +31,23 @@ const Header: React.FC = () => {
     };
   }, []);
 
+const LinkVariants ={
+  initial:{
+      x: "100vw",
+      opacity: 0
+  },
+  visible:{
+      x: 0,
+      opacity: 1
+    ,transition:{
+      duration: 0.5
+    }
+  },
+  exit:{
+    x: "-100vw"
+  }
+}
+
   useEffect(() => {
     if (windowWidth < 768 && dropDown) {
       setDropDown(false);
