@@ -375,12 +375,12 @@ select {
 }
 
 .destination{
-  border: 1px solid gold;
+  
   height: 0.65vh;
   padding: 2em;
 }
 .pick-div{
-  border: 1px solid gold;
+ 
 }
 .pick-div p{
   font-size: 1rem;
@@ -391,15 +391,44 @@ select {
   aspect-ratio: 1;
   margin-inline: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 .nav-div{
-  border: 1px solid gold;
+
 }
 
+.planet-nav {
+  width: max-content;
+  --gap: 1.5rem;
+  --underline-gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-inline:auto;
+}
+
+.planet-nav a {
+  text-decoration: none;
+}
+.planet-content{
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+.planet-content > p{
+  padding-bottom: 1.5em;
+  line-height: 2.2rem;
+  border-bottom: 3px solid hsl( var(--clr-light) /0.5 );
+}
+.distance :first-child{
+  margin-bottom: 10px;
+}
+.time :first-child{
+  margin-bottom: 10px;
+}
 /* Crew Page CSS */
 .crew-page{
   background-image:url("./../src/assets/crew/background-crew-mobile.jpg");
-  background-size: cover ;
+  background-size: contain ;
+  background-repeat: repeat-y;
   background-position: center;
   min-height: 100vh;
 }

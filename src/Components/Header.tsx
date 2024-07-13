@@ -68,7 +68,7 @@ const Header: React.FC = () => {
               <li>
                 <NavLink to="/" aria-selected={true} state={{page: "home"}}
                 end
-                 className={({isActive}) => {console.log(isActive)
+                 className={({isActive}) => {
                   return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
                  }}>
                 <span>00</span>Home
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <NavLink to="destination" state={{page: "destination"}}
-                className={({isActive}) => {console.log(isActive)
+                className={({isActive}) => {
                   return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
                  }}>
                 <span>01</span>Destination
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <NavLink to="crew" state={{page: "crew"}}
-                className={({isActive}) => {console.log(isActive)
+                className={({isActive}) => {
                   return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
                  }}>
                 <span>02</span>Crew
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <NavLink to="technology" state={{page: "technology"}} 
-                className={({isActive}) => {console.log(isActive)
+                className={({isActive}) => {
                   return `ff-sans-cond uppercase text-white letter-spacing-2 ${isActive ? "active" : ""}`
                  }}>
                 <span>03</span>Technology
